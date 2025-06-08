@@ -157,60 +157,55 @@ html {
 
 /* popup box */
 .frame {
-  max-width: 510px;
-  max-height: 299px;
+  position: relative;
+  width: 510px;
+  height: 299px;
   background-color: var(--bg-color-2);
   padding: 32px;
   border-radius: 16px;
   display: flex;
-  gap: 40px;
   flex-direction: column;
+  gap: 40px;
 }
-
-/* align-items: center;
-  justify-content: center; */
 
 /* close container (3) */
 .xContainer {
-  width: 235px;
-  height: 24px;
-  background-color: var(--bg-color);
+  position: absolute;
+  top: 16px;
+  right: 16px;
   display: flex;
-  align-items: flex-end;
   justify-content: flex-end;
 }
-/* close button X */
-.xBox {
+/* close button X - მარჯვენა ზედა კუთხეში ვერ გადმოვიტანე*/
+.buttonX {
   width: 24px;
   height: 24px;
   color: var(--color-3);
   background-color: var(--bg-color);
-  display: flex;
-  gap: 10px;
-  padding: 4px;
-  position: absolute;
   font-size: 18px;
   cursor: pointer;
   border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
 }
-
-/* order container (4) */
+.buttonX:hover {
+  background-color: #cccccc;
+  color: #000000;
+}
+/* order/content container (4) */
 .contentContainer {
-  width: 235px;
-  height: 424px;
+  width: 446px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
-  width: 446px;
-  height: 147px;
-  /* display: flax;
-  gap: 24px;
-  padding: 0; */
+  width: 100%;
+  height: auto;
 }
-
+/* ცენტრში ვერ დავსვი, თუმცა ყველანაირად ვეცადე :( */
 .buttonThanks {
   width: 248px;
   height: 48px;
@@ -218,6 +213,11 @@ html {
   background-color: var(--color-3);
   padding: 14px 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
